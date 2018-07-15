@@ -1,11 +1,21 @@
 class Square extends React.Component {
+  
+  // Add constructor to intialize state to null
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
   render() {
     return (
+      <button 
+        className="square" 
       
-      // Add alert when a square is clicked
-      <button className="square" onClick={() =>
-          alert('click')}>
-        {this.props.value}
+        // Modify click to set state to X
+        onClick={() => this.setState({value: 'X'})}
+      >
+        {this.state.value}
       </button>
     );
   }
@@ -13,7 +23,7 @@ class Square extends React.Component {
 
 class Board extends React.Component {
   renderSquare(i) {
-    return <Square value={i} />;
+    return <Square  value={i}/>;
   }
 
   render() {
