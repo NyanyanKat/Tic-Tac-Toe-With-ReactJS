@@ -1,9 +1,10 @@
 class Square extends React.Component {
   render() {
     return (
-      <button className="square">
       
-        // Change 2: show the props value
+      // Add alert when a square is clicked
+      <button className="square" onClick={() =>
+          alert('click')}>
         {this.props.value}
       </button>
     );
@@ -12,8 +13,6 @@ class Square extends React.Component {
 
 class Board extends React.Component {
   renderSquare(i) {
-    
-    // Change 1: Pass prop "value" to Square
     return <Square value={i} />;
   }
 
