@@ -1,3 +1,10 @@
+/*
+Project: Tic-tac-toe
+Author: Jimmy Chan
+*/
+
+
+
 class Square extends React.Component {
   render() {
     return (
